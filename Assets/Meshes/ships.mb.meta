@@ -9,15 +9,69 @@ ModelImporter:
     100002: imagePlane1
     100004: pPyramid1
     100006: //RootNode
+    100008: pSolid1
+    100010: pSolid2
+    100012: pSolid3
+    100014: pSolid4
+    100016: ship01
+    100018: ship02
+    100020: ship_rouge
+    100022: transform1
+    100024: transform2
+    100026: ship03
+    100028: ship04
+    100030: ship05
+    100032: ship_bleu
+    100034: ship_jaune
+    100036: ship_orange
+    100038: ship_vert
     400000: CAM1
     400002: imagePlane1
     400004: pPyramid1
     400006: //RootNode
+    400008: pSolid1
+    400010: pSolid2
+    400012: pSolid3
+    400014: pSolid4
+    400016: ship01
+    400018: ship02
+    400020: ship_rouge
+    400022: transform1
+    400024: transform2
+    400026: ship03
+    400028: ship04
+    400030: ship05
+    400032: ship_bleu
+    400034: ship_jaune
+    400036: ship_orange
+    400038: ship_vert
     2000000: CAM1
     2100000: lambert1
+    2100002: None1
     2300000: pPyramid1
+    2300002: pSolid3
+    2300004: pSolid4
+    2300006: ship_rouge
+    2300008: ship_bleu
+    2300010: ship_jaune
+    2300012: ship_orange
+    2300014: ship_vert
     3300000: pPyramid1
+    3300002: pSolid3
+    3300004: pSolid4
+    3300006: ship_rouge
+    3300008: ship_bleu
+    3300010: ship_jaune
+    3300012: ship_orange
+    3300014: ship_vert
     4300000: pPyramid1
+    4300002: ship_rouge
+    4300004: pSolid3
+    4300006: pSolid4
+    4300008: ship_vert
+    4300010: ship_orange
+    4300012: ship_jaune
+    4300014: ship_bleu
     9500000: //RootNode
   externalObjects: {}
   materials:
