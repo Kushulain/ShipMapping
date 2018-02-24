@@ -3,24 +3,43 @@ using System.Collections;
 
 public class shiftTexture : MonoBehaviour {
     public float speed = 4f;
+    public float changeMatSpeed = 4f;
     public float continuousSpeed = 0.1f;
     public float movement = 4f;
-    private Renderer rend;
-    private float timer = 1;
-    private Vector2 UVoffset;
+    public Material[] allMaterials;
+
+    private Renderer rend;    
+    private Vector2[] UVoffset;
+    private Material[] mats;
+    private float[] timers;
+    private float[] timerMat;
 
     void Start() {
         rend = GetComponent<Renderer>();
+        mats = rend.materials;
+        timers = new float[mats.Length];
+        timerMat = new float[mats.Length];
+        UVoffset = new Vector2[mats.Length];
+
     }
     void Update() {
-    	timer -= Time.deltaTime;
-    	UVoffset.y -= Time.deltaTime * continuousSpeed;
-    	if(timer<0){
-    		timer = Random.Range(0,speed);
-    		UVoffset.x += Random.value/movement;
-    		UVoffset.y += Random.value/movement;
-    		
-    	}
-    	rend.material.SetTextureOffset("_MainTex", UVoffset);
+    	for(int i=0; i< mats.Length; i++){
+	    	timers[i] -= Time.deltaTime;
+	    	timerMat[i] -= Time.deltaTime;
+	    	UVoffset[i].y -= Time.deltaTime * continuousSpeed;
+	    	UVoffset[i].x -= Time.deltaTime * continuousSpeed;
+	    	if(timers[i]<0){
+	    		timers[i] = Random.Range(0,speed);
+	    		UVoffset[i].x += Random.value/movement;
+	    		UVoffset[i].y += Random.value/movement;	    		
+	    	}
+	    	if(timerMat[i]<0){
+	    		timerMat[i] = Random.Range(changeMatSpeed/2,changeMatSpeed);
+	    		mats[i] = allMaterials[ Random.Range(0,9) ];
+	    		rend.materials = mats;
+	    	}
+	    	mats[i].SetTextureOffset("_MainTex", UVoffset[i]);
+	    	rend.materials = mats;
+	    }
     }
 }

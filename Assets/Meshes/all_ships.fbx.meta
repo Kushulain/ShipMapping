@@ -19,6 +19,9 @@ ModelImporter:
     400010: ship_vert
     2100000: lambert1
     2100002: None1
+    2100004: lambert3
+    2100006: lambert4
+    2100008: lambert2
     2300000: ship_bleu
     2300002: ship_jaune
     2300004: ship_orange
