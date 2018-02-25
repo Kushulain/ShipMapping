@@ -181,14 +181,12 @@ function Update () {
 			Debug.Log("reset mapping");
 			var filePath = Application.persistentDataPath + "/mapping.txt";
 			if (File.Exists(filePath))
-				File.Delete(filePath);	
+				File.Delete(filePath);
 			obj.GetComponent.<MeshFilter>().mesh.vertices = originalMesh.vertices;
 			cam.transform.position = originalCam.transform.position;
 			cam.transform.rotation = originalCam.transform.rotation;
 			cam.GetComponent.<Camera>().fieldOfView = originalCam.GetComponent.<Camera>().fieldOfView;
 			cam.GetComponent.<Camera>().orthographicSize = originalCam.GetComponent.<Camera>().orthographicSize;
-			saveMapping();
-			readMapping();
 		}
 	}
 }
