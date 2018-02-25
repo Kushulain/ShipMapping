@@ -7,12 +7,14 @@ public class shiftTexture : MonoBehaviour {
     public float continuousSpeed = 0.1f;
     public float movement = 4f;
     public Material[] allMaterials;
+    public Material setupMat;
 
     private Renderer rend;    
     private Vector2[] UVoffset;
     private Material[] mats;
     private float[] timers;
     private float[] timerMat;
+    private bool mappingMode;
 
     void Start() {
         rend = GetComponent<Renderer>();
@@ -26,8 +28,8 @@ public class shiftTexture : MonoBehaviour {
     	for(int i=0; i< mats.Length; i++){
 	    	timers[i] -= Time.deltaTime;
 	    	timerMat[i] -= Time.deltaTime;
-	    	UVoffset[i].y -= Time.deltaTime * continuousSpeed;
-	    	UVoffset[i].x -= Time.deltaTime * continuousSpeed;
+	    	UVoffset[i].y -= Time.deltaTime * continuousSpeed * mats[i].mainTextureScale.x;
+	    	UVoffset[i].x -= Time.deltaTime * continuousSpeed * mats[i].mainTextureScale.x;
 	    	if(timers[i]<0){
 	    		timers[i] = Random.Range(0,speed);
 	    		UVoffset[i].x += Random.value/movement;
@@ -41,5 +43,16 @@ public class shiftTexture : MonoBehaviour {
 	    	mats[i].SetTextureOffset("_MainTex", UVoffset[i]);
 	    	rend.materials = mats;
 	    }
+
+        // mapping mode for setup
+        if(Input.GetKeyDown(KeyCode.Space))
+            mappingMode = !mappingMode;
+        if(mappingMode){
+            for(int i=0; i< mats.Length; i++){
+                timerMat[i]=0;
+                mats[i] = setupMat;
+            }
+            rend.materials = mats;
+        }
     }
 }

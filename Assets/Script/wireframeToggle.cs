@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class wireframeToggle : MonoBehaviour {
 
+	public bool autoChange;
+	public float autoChangeSpeed = 10;
 	private bool wireframe;
+	private float timer;
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +18,15 @@ public class wireframeToggle : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown("space"))
 			wireframe = !wireframe;
+		if(autoChange){
+			timer -= Time.deltaTime;
+			if(timer<0){			
+				timer+= Random.Range(autoChangeSpeed/2,autoChangeSpeed);
+				if(!wireframe)
+					timer /= 3; // less time with wireframe on
+				wireframe = !wireframe;
+			}
+		}
 	}
 
 	void OnPreRender() {
