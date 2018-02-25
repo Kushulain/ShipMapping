@@ -35,7 +35,7 @@ public class shiftTexture : MonoBehaviour {
 	    	}
 	    	if(timerMat[i]<0){
 	    		timerMat[i] = Random.Range(changeMatSpeed/2,changeMatSpeed);
-	    		mats[i] = allMaterials[ Random.Range(0,9) ];
+	    		mats[i] = allMaterials[ Random.Range(0,allMaterials.Length) ];
 	    		rend.materials = mats;
 	    	}
 	    	mats[i].SetTextureOffset("_MainTex", UVoffset[i]);
