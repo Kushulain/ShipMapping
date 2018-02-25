@@ -16,7 +16,7 @@ public class wireframeToggle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown("space"))
+		if (Input.GetKeyDown(KeyCode.RightControl))
 			wireframe = !wireframe;
 		if(autoChange){
 			timer -= Time.deltaTime;

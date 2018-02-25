@@ -644,6 +644,7 @@ GameObject:
   - component: {fileID: 834679633}
   - component: {fileID: 834679632}
   - component: {fileID: 834679630}
+  - component: {fileID: 834679627}
   m_Layer: 0
   m_Name: shipCam_02
   m_TagString: MainCamera
@@ -651,6 +652,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &834679627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 834679626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48814e50d516544468d4aad6aebce0d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoChange: 0
+  autoChangeSpeed: 10
 --- !u!124 &834679630
 Behaviour:
   m_ObjectHideFlags: 0
@@ -918,6 +932,7 @@ GameObject:
   - component: {fileID: 1389828741}
   - component: {fileID: 1389828740}
   - component: {fileID: 1389828738}
+  - component: {fileID: 1389828735}
   m_Layer: 0
   m_Name: shipCam_05
   m_TagString: MainCamera
@@ -925,6 +940,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1389828735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1389828734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48814e50d516544468d4aad6aebce0d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoChange: 0
+  autoChangeSpeed: 10
 --- !u!124 &1389828738
 Behaviour:
   m_ObjectHideFlags: 0
@@ -1195,6 +1223,7 @@ GameObject:
   - component: {fileID: 1538186221}
   - component: {fileID: 1538186220}
   - component: {fileID: 1538186218}
+  - component: {fileID: 1538186215}
   m_Layer: 0
   m_Name: shipCam_01
   m_TagString: MainCamera
@@ -1202,6 +1231,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1538186215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1538186214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48814e50d516544468d4aad6aebce0d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoChange: 0
+  autoChangeSpeed: 10
 --- !u!124 &1538186218
 Behaviour:
   m_ObjectHideFlags: 0
@@ -1267,6 +1309,7 @@ GameObject:
   - component: {fileID: 1548493398}
   - component: {fileID: 1548493397}
   - component: {fileID: 1548493395}
+  - component: {fileID: 1548493392}
   m_Layer: 0
   m_Name: shipCam_03
   m_TagString: MainCamera
@@ -1274,6 +1317,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1548493392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1548493391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48814e50d516544468d4aad6aebce0d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoChange: 0
+  autoChangeSpeed: 10
 --- !u!124 &1548493395
 Behaviour:
   m_ObjectHideFlags: 0
@@ -1339,6 +1395,7 @@ GameObject:
   - component: {fileID: 1585818304}
   - component: {fileID: 1585818303}
   - component: {fileID: 1585818301}
+  - component: {fileID: 1585818298}
   m_Layer: 0
   m_Name: shipCam_04
   m_TagString: MainCamera
@@ -1346,6 +1403,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1585818298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1585818297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48814e50d516544468d4aad6aebce0d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoChange: 0
+  autoChangeSpeed: 10
 --- !u!124 &1585818301
 Behaviour:
   m_ObjectHideFlags: 0
