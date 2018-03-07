@@ -4,10 +4,12 @@ using System.Collections;
 public class shiftTexture : MonoBehaviour {
     public float speed = 4f;
     public float changeMatSpeed = 4f;
-    public float continuousSpeed = 0.1f;
+	public float continuousSpeed = 0.1f;
+	public float changeListMat = 0.1f;
     public float movement = 4f;
     public Material[] allMaterials;
     public Material setupMat;
+
 
     private Renderer rend;    
     private Vector2[] UVoffset;
@@ -44,15 +46,5 @@ public class shiftTexture : MonoBehaviour {
 	    	rend.materials = mats;
 	    }
 
-        // mapping mode for setup
-        if(Input.GetKeyDown(KeyCode.Space))
-            mappingMode = !mappingMode;
-        if(mappingMode){
-            for(int i=0; i< mats.Length; i++){
-                timerMat[i]=0;
-                mats[i] = setupMat;
-            }
-            rend.materials = mats;
-        }
     }
 }

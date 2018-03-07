@@ -51,6 +51,7 @@
                 // range. To display it as color, bring the range into 0..1
                 // and put into red, green, blue components
                 c.rgb = (i.worldNormal*0.5+0.5) + tex2D(_MainTex, i.uv)/3;
+                c.a = 1.0;
                 return c;
             }
             ENDCG
